@@ -1,0 +1,7 @@
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\bin\Debug\UnitTestProject.dll
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\bin\Debug\UnitTestProject.pdb
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\bin\Debug\Lab 2 Concordanse.exe
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\bin\Debug\Lab 2 Concordanse.pdb
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\obj\Debug\UnitTestProject.csprojResolveAssemblyReference.cache
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\obj\Debug\UnitTestProject.dll
+F:\EPAM-dotnet\Lab 2 Concordanse\UnitTestProject\obj\Debug\UnitTestProject.pdb

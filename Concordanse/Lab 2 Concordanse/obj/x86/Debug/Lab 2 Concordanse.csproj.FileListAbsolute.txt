@@ -1,0 +1,14 @@
+D:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\bin\Debug\Lab 2 Concordanse.exe
+D:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\bin\Debug\Lab 2 Concordanse.pdb
+D:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.exe
+D:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.pdb
+d:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.csprojResolveAssemblyReference.cache
+F:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.exe
+F:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.pdb
+F:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\bin\Debug\Lab 2 Concordanse.exe
+F:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\bin\Debug\Lab 2 Concordanse.pdb
+F:\EPAM-dotnet\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.csprojResolveAssemblyReference.cache
+D:\Lab 2 Concordanse\Lab 2 Concordanse\bin\Debug\Lab 2 Concordanse.exe
+D:\Lab 2 Concordanse\Lab 2 Concordanse\bin\Debug\Lab 2 Concordanse.pdb
+D:\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.exe
+D:\Lab 2 Concordanse\Lab 2 Concordanse\obj\x86\Debug\Lab 2 Concordanse.pdb

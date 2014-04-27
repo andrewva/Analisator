@@ -1,0 +1,46 @@
+﻿@model WebSales.Models.SelectUserRolesViewModel
+
+@{
+    ViewBag.Title = "Пользовательские права";
+}
+
+<h2>Права для пользователя @Html.DisplayFor(model => model.UserName)</h2>
+<hr />
+
+@using (Html.BeginForm("UserRoles", "Account", FormMethod.Post, new { encType = "multipart/form-data", name = "myform" }))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        @Html.ValidationSummary(true)
+        <div class="form-group">
+            <div class="col-md-10">
+                @Html.HiddenFor(model => model.UserName)
+            </div>
+        </div>
+
+        <h4>Выберите права для данного пользователя</h4>
+        <br />
+        <hr />
+
+        <table>
+            <tr>
+                <th>
+                    Выбрать
+                </th>
+                <th>
+                    право
+                </th>
+            </tr>
+            @Html.EditorFor(model => model.Roles)
+        </table>
+        <br />
+        <hr />
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Сохранить" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}

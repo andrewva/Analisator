@@ -1,0 +1,30 @@
+﻿@{
+    ViewBag.Title = "Upload your file";
+}
+
+<h2>Upload your file</h2>
+
+<p>
+    @using (Html.BeginForm("", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="fileUpload" class="btn btn-default" /><br />
+        <input type="submit" name="Submit" id="SubmitSingle" value="Upload" class="btn btn-default" />
+    }
+</p>
+<h2>Upload your several files</h2>
+<p>
+    @using (Html.BeginForm("", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="file" name="fileUpload[0]" class="btn btn-default" /><br />
+        <input type="file" name="fileUpload[1]" class="btn btn-default" /><br />
+        <input type="file" name="fileUpload[2]" class="btn btn-default" /><br />
+        <input type="submit" name="Submit" id="SubmitMultiply" value="Upload" class="btn btn-default" />
+    }
+</p>
+<p>
+    @using (Html.BeginForm("UpladText", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <textarea name="fileUpload"></textarea><br />
+        <input type="submit" name="Submit" id="SubmitSingle" value="Upload" class="btn btn-default" />
+    }
+</p>

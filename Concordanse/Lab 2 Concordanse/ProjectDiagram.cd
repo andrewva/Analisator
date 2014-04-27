@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="Lab_2_Concordanse.ConcoleOutput" BaseTypeListCollapsed="true">
+    <Position X="4.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputRealization\ConcoleOutput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab_2_Concordanse.Program">
+    <Position X="11.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.PunctuationMark">
+    <Position X="4.25" Y="3" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextGradation\PunctuationMark.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.Symbol">
+    <Position X="0.5" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextGradation\Symbol.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.TextContent">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAgAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAI=</HashCode>
+      <FileName>TextContent.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.TxtParser" BaseTypeListCollapsed="true">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ParseRealization\TxtParser.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.252" Collapsed="true" />
+  </Class>
+  <Class Name="Lab_2_Concordanse.Word">
+    <Position X="0.5" Y="3" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAACAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextGradation\Word.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.Concordanse">
+    <Position X="8.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAAAgAAAAAAAAAAAAAAAAgAAAgAAA=</HashCode>
+      <FileName>Concordanse.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.TxtOutput" BaseTypeListCollapsed="true">
+    <Position X="10" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>OutputRealization\TxtOutput.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="Lab_2_Concordanse.ConcordanseItem">
+    <Position X="11.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAgAAEBAAAAAAEAAAIAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ConcordanseItem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Lab_2_Concordanse.Sentence">
+    <Position X="2.5" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAAAEAAAIAAAACAAAAEAAAAAAAAIAAAA=</HashCode>
+      <FileName>TextGradation\Sentence.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="Lab_2_Concordanse.IFileParser">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfases\IFileParser.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab_2_Concordanse.IOutputResult">
+    <Position X="9.75" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfases\IOutputResult.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Lab_2_Concordanse.IFileOutputResult">
+    <Position X="6.5" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Interfases\IFileOutputResult.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

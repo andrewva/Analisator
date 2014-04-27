@@ -1,0 +1,166 @@
+﻿@model XMLParser.AnaliseModel
+@{
+    ViewBag.Title = "Result of analise";
+}
+<h2>Result</h2>
+@Scripts.Render("/Scripts/Chart.js")
+
+<style>
+    canvas {
+        float: left;
+    }
+</style>
+
+<div style="width:600px;height:600px;">
+    <canvas id="doughnut" height="300" width="200"></canvas>
+    <canvas id="line" height="300" width="1000"></canvas>
+    <canvas id="polarArea" height="300" width="200"></canvas>
+    <canvas id="bar" height="300" width="200"></canvas>
+    <canvas id="pie" height="300" width="200"></canvas>
+    <canvas id="radar" height="300" width="200"></canvas>
+</div>
+
+<script>
+
+    var doughnutData = [];
+
+    doughnutData[doughnutData.length] =  {
+        label: "sds",
+        value: @Model.DictionaryWordCount,
+        color: "#FD3241"
+    };
+
+    doughnutData[doughnutData.length] =  {
+        label: "sds",
+        value:@Model.WordCount - @Model.DictionaryWordCount,
+        color: "#4D5360"
+    };
+    var labelsList = [];
+    var dataList = [];
+</script>
+@foreach (var item in Model.Frequencies)
+{
+    <script>
+        labelsList[labelsList.length] =  '@item.Symbol';
+        dataList [dataList.length] =  '@item.Frequency';
+    </script>
+}
+
+<script>
+    var lineChartData = {
+        labels: labelsList,
+        datasets: [
+            {
+                fillColor: "rgba(220,220,220,0.7)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                data: dataList
+            }
+        ]
+    };
+    //var lineChartData = {
+    //    labels: ["", "", "", "", "", "", ""],
+    //    datasets: [
+    //        {
+    //            fillColor: "rgba(220,220,220,0.5)",
+    //            strokeColor: "rgba(220,220,220,1)",
+    //            pointColor: "rgba(220,220,220,1)",
+    //            pointStrokeColor: "#fff",
+    //            data: [65, 59, 90, 81, 56, 55, 40]
+    //        },
+    //        {
+    //            fillColor: "rgba(151,187,205,0.5)",
+    //            strokeColor: "rgba(151,187,205,1)",
+    //            pointColor: "rgba(151,187,205,1)",
+    //            pointStrokeColor: "#fff",
+    //            data: [28, 48, 40, 19, 96, 27, 100]
+    //        }
+    //    ]
+
+    //};
+    var pieData = [
+            {
+                value: 30,
+                color: "#F38630"
+            },
+            {
+                value: 50,
+                color: "#E0E4CC"
+            },
+            {
+                value: 100,
+                color: "#69D2E7"
+            }
+
+    ];
+    var barChartData = {
+        labels: ["January", "February", "March", "April", "May", "June", "July"],
+        datasets: [
+            {
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                data: [65, 59, 90, 81, 56, 55, 40]
+            },
+            {
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,1)",
+                data: [28, 48, 40, 19, 96, 27, 100]
+            }
+        ]
+
+    };
+    var chartData = [
+            {
+                value: Math.random(),
+                color: "#D97041"
+            },
+            {
+                value: Math.random(),
+                color: "#C7604C"
+            },
+            {
+                value: Math.random(),
+                color: "#21323D"
+            },
+            {
+                value: Math.random(),
+                color: "#9D9B7F"
+            },
+            {
+                value: Math.random(),
+                color: "#7D4F6D"
+            },
+            {
+                value: Math.random(),
+                color: "#584A5E"
+            }
+    ];
+    var radarChartData = {
+        labels: ["", "", "", "", "", "", ""],
+        datasets: [
+            {
+                fillColor: "rgba(220,220,220,0.5)",
+                strokeColor: "rgba(220,220,220,1)",
+                pointColor: "rgba(220,220,220,1)",
+                pointStrokeColor: "#fff",
+                data: [65, 59, 90, 81, 56, 55, 40]
+            },
+            {
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "rgba(151,187,205,1)",
+                pointColor: "rgba(151,187,205,1)",
+                pointStrokeColor: "#fff",
+                data: [28, 48, 40, 19, 96, 27, 100]
+            }
+        ]
+
+    };
+    new Chart(document.getElementById("doughnut").getContext("2d")).Doughnut(doughnutData);
+    new Chart(document.getElementById("line").getContext("2d")).Line(lineChartData);
+    new Chart(document.getElementById("radar").getContext("2d")).Radar(radarChartData);
+    new Chart(document.getElementById("polarArea").getContext("2d")).PolarArea(chartData);
+    new Chart(document.getElementById("bar").getContext("2d")).Bar(barChartData);
+    new Chart(document.getElementById("pie").getContext("2d")).Pie(pieData);
+
+</script>

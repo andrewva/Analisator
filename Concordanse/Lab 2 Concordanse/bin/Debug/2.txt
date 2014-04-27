@@ -1,0 +1,37 @@
+﻿LINQ to Objects
+LINQ --- LINQ to Objects
+В данном разделе описываются сущности, составляющие LINQ. Здесь раскрыта каждая операция, которая может понадобиться. Большая часть эффективности LINQ зависит от знания операций и понимания того, что они делают. Даже если вы не запомните все вариации каждой операции, просто знание об их существовании и о том, что они делают, может здорово помочь.
+
+Представленный обзор LINQ to Objects и стандартных операций запросов позволил удостовериться в мощи и удобстве LINQ, когда речь идет об опросе данных любого типа, которые хранятся коллекциях, расположенных в памяти. Предлагая около 50 операций, LINQ to Objects без сомнения позволит сделать код опроса данных более согласованным, надежным и легким в написании.
+Содержание:
+1. Основы LINQ
+Появление LINQ
+Советы по использованию LINQ
+Интеграция LINQ с C#
+Ключевое слово var
+Запросы LINQ
+Обзор LINQ to Objects
+2. Отложенные операции
+Операция Where
+Операции Select и SelectMany
+Операции Take, TakeWhile, Skip и SkipWhile
+Операция Concat
+Операции OrderBy и OrderByDescending
+Операции ThenBy и ThenByDescending
+Операции Join и GroupJoin
+Операция GroupBy
+Операции Distinct, Union, Except и Intersect
+Операции Cast, OfType и AsEnumerable
+Операция DefaultIfEmpty
+Операции Range, Repeat и Empty
+3. Не отложенные операции
+Операции ToArray и ToList
+Операция ToDictionary
+Операция ToLookup
+Операция SequenceEqual
+Операции First, FirstOrDefault, Last и LastOrDefault
+Операции Single, SingleOrDefault, ElementAt и ElementAtOrDefault
+Операции Any, All и Contains
+Операции Count, LongCount и Sum
+Операции Min и Max
+Операции Average и Aggregate

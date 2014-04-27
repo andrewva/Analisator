@@ -1,0 +1,5 @@
+D:\Final Project\FinalProject\Concordanse\Lab 2 Concordanse\bin\Debug\Concordanse.dll
+D:\Final Project\FinalProject\Concordanse\Lab 2 Concordanse\bin\Debug\Concordanse.pdb
+D:\Final Project\FinalProject\Concordanse\Lab 2 Concordanse\obj\x86\Debug\Concordanse.dll
+D:\Final Project\FinalProject\Concordanse\Lab 2 Concordanse\obj\x86\Debug\Concordanse.pdb
+D:\Final Project\FinalProject\Concordanse\Lab 2 Concordanse\obj\x86\Debug\Concordanse.csprojResolveAssemblyReference.cache

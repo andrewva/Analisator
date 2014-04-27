@@ -1,0 +1,7 @@
+D:\Final Project\FinalProject\XMLParser\bin\Release\XMLParser.dll
+D:\Final Project\FinalProject\XMLParser\bin\Release\XMLParser.pdb
+D:\Final Project\FinalProject\XMLParser\bin\Release\Concordanse.dll
+D:\Final Project\FinalProject\XMLParser\bin\Release\Concordanse.pdb
+D:\Final Project\FinalProject\XMLParser\obj\Release\XMLParser.csprojResolveAssemblyReference.cache
+D:\Final Project\FinalProject\XMLParser\obj\Release\XMLParser.dll
+D:\Final Project\FinalProject\XMLParser\obj\Release\XMLParser.pdb
