@@ -165,7 +165,9 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CabinetController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ItemController.cs" />
     <Compile Include="Controllers\ResultController.cs" />
     <Compile Include="Controllers\UploadController.cs" />
     <Compile Include="Global.asax.cs">
@@ -239,6 +241,12 @@
     <Content Include="Views\Shared\EditorTemplates\SelectRoleEditorViewModel.cshtml" />
     <Content Include="Views\Upload\Index.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
+    <Content Include="Views\Cabinet\Index.cshtml" />
+    <Content Include="Views\Item\Create.cshtml" />
+    <Content Include="Views\Item\Delete.cshtml" />
+    <Content Include="Views\Item\Details.cshtml" />
+    <Content Include="Views\Item\Edit.cshtml" />
+    <Content Include="Views\Item\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -257,6 +265,10 @@
     <ProjectReference Include="..\Concordanse\Lab 2 Concordanse\Concordanse.csproj">
       <Project>{5d8d429b-5164-4df6-ad0d-9d09609f74b4}</Project>
       <Name>Concordanse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataModel\DataModel.csproj">
+      <Project>{f5f2353b-b0a2-4eca-a544-b036fbe40e71}</Project>
+      <Name>DataModel</Name>
     </ProjectReference>
     <ProjectReference Include="..\XMLParser\XMLParser.csproj">
       <Project>{accee534-a228-4363-b9c2-b42b15cc28cf}</Project>

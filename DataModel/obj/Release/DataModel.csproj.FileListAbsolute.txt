@@ -1,0 +1,9 @@
+D:\Analiese\Analisator\DataModel\bin\Release\DataModel.dll
+D:\Analiese\Analisator\DataModel\bin\Release\DataModel.pdb
+D:\Analiese\Analisator\DataModel\obj\Release\DataModel.dll
+D:\Analiese\Analisator\DataModel\obj\Release\DataModel.pdb
+D:\Analiese\Analisator\DataModel\bin\Release\DataModel.dll.config
+D:\Analiese\Analisator\DataModel\bin\Release\EntityFramework.dll
+D:\Analiese\Analisator\DataModel\bin\Release\EntityFramework.SqlServer.dll
+D:\Analiese\Analisator\DataModel\bin\Release\EntityFramework.xml
+D:\Analiese\Analisator\DataModel\bin\Release\EntityFramework.SqlServer.xml

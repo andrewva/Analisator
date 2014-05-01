@@ -11,10 +11,10 @@ namespace Concordanse.OutputRealization
 {
     class XmlOutput : IFileOutputResult
     {
-        public string Output(Concordanse concordanse)
+        public string Output(Concordanse concordanse,string path)
         {
             //взять из конфигурации
-            var path = AppDomain.CurrentDomain.BaseDirectory + "UploadedFiles/";
+            path = path.Substring(path.Length-3);
             var fileName = String.Format("{0}.{1}", Guid.NewGuid(), "xml");
             var pathToXml = Path.Combine(path, fileName);
 

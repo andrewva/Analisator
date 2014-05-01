@@ -29,7 +29,7 @@ namespace WebSales.Controllers
                 var path = AppDomain.CurrentDomain.BaseDirectory + "UploadedFiles/";
                 var filename = Path.GetFileName(file.FileName);
                 if (filename == null) continue;
-                filePath = (Path.Combine(path, filename));
+                filePath = (Path.Combine(path, HttpContext.User.Identity.GetUserId() + "_" + DateTime.Now.ToShortDateString() + "_" + DateTime.Now.ToShortTimeString() + "_" + filename));
                 file.SaveAs(filePath);
             }
               var parse = new Parse();

@@ -1,0 +1,20 @@
+﻿@using WebSales.Models
+@model List<string>
+@{
+    ViewBag.Title = "Кабинет";
+}
+
+<h2>Список загруженных файлов и результатов</h2>
+<table class="table">
+    <tr>
+        <th>Название файла</th>
+        <th>Результат анализа</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>item</td>
+            <td>@Html.ActionLink("Результат","Index","Result",new UploadData{ResultText = item},null)</td>
+        </tr>
+    }
+</table>

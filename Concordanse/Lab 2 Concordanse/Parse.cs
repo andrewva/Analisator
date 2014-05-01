@@ -22,7 +22,7 @@ namespace Concordanse
             //var output = new TxtOutput();
             //output.Output(concordance.GetConcordanseResult(), pathOutput);
             var output = new XmlOutput();
-            return output.Output(concordance);
+            return output.Output(concordance,path);
         }
     }
 }
