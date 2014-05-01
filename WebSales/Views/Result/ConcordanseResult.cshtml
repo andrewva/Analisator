@@ -1,0 +1,16 @@
+﻿@model List<string>
+
+@{
+    ViewBag.Title = "Конкорданс";
+}
+
+<h2>Конкорданс</h2>
+<table class="table">
+    
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td> @item</td>
+        </tr>
+    }
+</table>

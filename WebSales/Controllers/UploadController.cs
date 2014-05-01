@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using System.Web.Security;
 using System.Web.UI.WebControls;
 using Concordanse;
+using DataModel;
 using Microsoft.AspNet.Identity;
 using WebSales.Models;
 using XMLParser;
@@ -23,38 +24,72 @@ namespace WebSales.Controllers
         public ActionResult Index(IEnumerable<HttpPostedFileBase> fileUpload)
         {
             var filePath = "";
+            var fileName = "";
+            var resultPath = "";
             foreach (var file in fileUpload)
             {
                 if (file == null) continue;
                 var path = AppDomain.CurrentDomain.BaseDirectory + "UploadedFiles/";
-                var filename = Path.GetFileName(file.FileName);
-                if (filename == null) continue;
-                filePath = (Path.Combine(path, HttpContext.User.Identity.GetUserId() + "_" + DateTime.Now.ToShortDateString() + "_" + DateTime.Now.ToShortTimeString() + "_" + filename));
+                fileName = Path.GetFileName(file.FileName);
+                if (fileName == null) continue;
+                filePath = (Path.Combine(path, Guid.NewGuid() + "_" + fileName));
+                resultPath = filePath.Substring(0, filePath.Length - 3) + "xml";
                 file.SaveAs(filePath);
             }
-              var parse = new Parse();
+            var parse = new Parse();
             var data = new UploadData()
             {
-                ResultText = parse.ParseFile(filePath),
-                UploadDate = DateTime.Now,
-                UploadText = filePath,
-                UserId = HttpContext.User.Identity.GetUserId()
+                ResultText = parse.ParseFile(filePath)
             };
-          
+            using (var db = new UploadDB())
+            {
+                var item = new Item
+                {
+                    FileName = fileName,
+                    UploadDate = DateTime.Now,
+                    UserId = HttpContext.User.Identity.Name,
+                    ResultPath = resultPath,
+                    UploadPath = filePath
+                };
+                db.Items.Add(item);
+                db.SaveChanges();
+            }
             return RedirectToAction("Index", "Result", data);
         }
 
         public ActionResult UpladText(string fileUpload)
         {
+            var filePath = "";
+            var fileName = "";
+            var resultPath = "";
             var path = AppDomain.CurrentDomain.BaseDirectory + "UploadedFiles/";
-            var filename = Path.GetFileName(Guid.NewGuid().ToString());
-            using (var sr = new StreamWriter(Path.Combine(path, filename)))
+            filePath = (Path.Combine(path, Guid.NewGuid() + "_" + fileName + ".txt"));
+            resultPath = filePath.Substring(0, filePath.Length - 3) + "xml";
+
+            using (var sr = new StreamWriter(filePath))
             {
                 sr.Write(fileUpload);
             }
             var parse = new Parse();
-            var xmlPath = parse.ParseFile(path);
-            return RedirectToAction("Index", "Result", xmlPath);
+            var data = new UploadData()
+            {
+                ResultText = parse.ParseFile(filePath)
+            };
+            using (var db = new UploadDB())
+            {
+                var item = new Item
+                {
+                    FileName = fileName,
+                    UploadDate = DateTime.Now,
+                    UserId = HttpContext.User.Identity.Name,
+                    ResultPath = resultPath,
+                    UploadPath = filePath
+                };
+                db.Items.Add(item);
+                db.SaveChanges();
+            }
+
+            return RedirectToAction("Index", "Result", data);
         }
     }
 }

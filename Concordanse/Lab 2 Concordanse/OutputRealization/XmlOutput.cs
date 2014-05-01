@@ -14,9 +14,8 @@ namespace Concordanse.OutputRealization
         public string Output(Concordanse concordanse,string path)
         {
             //взять из конфигурации
-            path = path.Substring(path.Length-3);
-            var fileName = String.Format("{0}.{1}", Guid.NewGuid(), "xml");
-            var pathToXml = Path.Combine(path, fileName);
+            path = path.Substring(0,path.Length-3)+"xml";
+            var pathToXml = path;
 
             var formatter = new XmlSerializer(typeof(Concordanse));
             using (var fs = new FileStream(pathToXml, FileMode.OpenOrCreate))

@@ -7,3 +7,4 @@ D:\Analiese\Analisator\Concordanse\Lab 2 Concordanse\bin\Release\Concordanse.dll
 D:\Analiese\Analisator\Concordanse\Lab 2 Concordanse\bin\Release\Concordanse.pdb
 D:\Analiese\Analisator\Concordanse\Lab 2 Concordanse\obj\x86\Release\Concordanse.dll
 D:\Analiese\Analisator\Concordanse\Lab 2 Concordanse\obj\x86\Release\Concordanse.pdb
+D:\Analiese\Analisator\Concordanse\Lab 2 Concordanse\obj\x86\Release\Concordanse.csprojResolveAssemblyReference.cache

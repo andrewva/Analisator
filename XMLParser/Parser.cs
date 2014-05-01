@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Xml.Serialization;
+using Concordanse;
 
 namespace XMLParser
 {
@@ -19,12 +20,12 @@ namespace XMLParser
             var frequencies = new List<SymbolFrequency>();
 
 
-            var wordGroups = conc.Items.GroupBy(m=>m.Word.ToString()[0]).ToList();
+            var wordGroups = conc.Items.GroupBy(m => m.Word.ToString()[0]).ToList();
 
             foreach (var word in wordGroups)
             {
                 var n = word.Sum(concordanseItem => concordanseItem.Count);
-                frequencies.Add(new SymbolFrequency(){Symbol = word.Key.ToString() ,Frequency = n});
+                frequencies.Add(new SymbolFrequency() { Symbol = word.Key.ToString(), Frequency = n });
             }
 
             //foreach (var item in conc.Items)
@@ -47,10 +48,22 @@ namespace XMLParser
                 SymbolCount = conc.SybolCount,
                 UnoqueWordCount = conc.Items.Where(m => m.Count == 1).ToList().Count(),
                 WordCount = conc.WordCount,
-               Frequencies = frequencies
+                Frequencies = frequencies
             };
-          
+
             return model;
+        }
+
+        public Concordanse.Concordanse ParseToConcordanse(string pathToXml)
+        {
+            var formatter = new XmlSerializer(typeof(Concordanse.Concordanse));
+
+            Concordanse.Concordanse conc;
+            using (var fs = new FileStream(pathToXml, FileMode.OpenOrCreate))
+            {
+                conc = (Concordanse.Concordanse)formatter.Deserialize(fs);
+            }
+            return conc;
         }
     }
 }

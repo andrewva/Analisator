@@ -12,7 +12,7 @@ using WebSales.Models;
 
 namespace WebSales.Controllers
 {
-    [Authorize]
+   
     public class AccountController : Controller
     {
         public AccountController()
@@ -170,7 +170,7 @@ namespace WebSales.Controllers
             return View(model);
         }
 
-        [Authorize(Roles = "Admin")]
+     
         public ActionResult Register()
         {
             return View();
@@ -178,7 +178,7 @@ namespace WebSales.Controllers
 
 
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+    
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {

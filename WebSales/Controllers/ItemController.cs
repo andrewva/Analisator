@@ -29,45 +29,6 @@ namespace WebSales.Controllers
             return View(item);
         }
 
-        public ActionResult Create()
-        {
-            return View();
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include="Id,FileName,ResultName,UserId,UploadDate")] Item item)
-        {
-            if (!ModelState.IsValid) return View(item);
-            _db.Items.Add(item);
-            _db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
-        public ActionResult Edit(int? id)
-        {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
-            var item = _db.Items.Find(id);
-            if (item == null)
-            {
-                return HttpNotFound();
-            }
-            return View(item);
-        }
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include="Id,FileName,ResultName,UserId,UploadDate")] Item item)
-        {
-            if (!ModelState.IsValid) return View(item);
-            _db.Entry(item).State = EntityState.Modified;
-            _db.SaveChanges();
-            return RedirectToAction("Index");
-        }
-
         public ActionResult Delete(int? id)
         {
             if (id == null)

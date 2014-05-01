@@ -7,7 +7,7 @@
 <h2>Index</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Загрузить", "Index","Upload")
 </p>
 <table class="table">
     <tr>
@@ -15,7 +15,10 @@
             @Html.DisplayNameFor(model => model.FileName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.ResultName)
+            @Html.DisplayNameFor(model => model.ResultPath)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UploadPath)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UserId)
@@ -32,7 +35,10 @@
             @Html.DisplayFor(modelItem => item.FileName)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.ResultName)
+            @Html.DisplayFor(modelItem => item.ResultPath)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UploadPath)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UserId)
@@ -41,7 +47,6 @@
             @Html.DisplayFor(modelItem => item.UploadDate)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
             @Html.ActionLink("Details", "Details", new { id=item.Id }) |
             @Html.ActionLink("Delete", "Delete", new { id=item.Id })
         </td>

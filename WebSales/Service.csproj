@@ -242,11 +242,10 @@
     <Content Include="Views\Upload\Index.cshtml" />
     <Content Include="Views\Result\Index.cshtml" />
     <Content Include="Views\Cabinet\Index.cshtml" />
-    <Content Include="Views\Item\Create.cshtml" />
     <Content Include="Views\Item\Delete.cshtml" />
     <Content Include="Views\Item\Details.cshtml" />
-    <Content Include="Views\Item\Edit.cshtml" />
     <Content Include="Views\Item\Index.cshtml" />
+    <Content Include="Views\Result\ConcordanseResult.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

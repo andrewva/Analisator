@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<Concordanse xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Items>
+    <ConcordanseItem>
+      <Count>1</Count>
+      <PageList>
+        <int>1</int>
+      </PageList>
+      <Word>
+        <_value>слова</_value>
+      </Word>
+      <IncrementCount>1</IncrementCount>
+    </ConcordanseItem>
+    <ConcordanseItem>
+      <Count>2</Count>
+      <PageList>
+        <int>1</int>
+      </PageList>
+      <Word>
+        <_value>слово</_value>
+      </Word>
+      <IncrementCount>2</IncrementCount>
+    </ConcordanseItem>
+  </Items>
+  <SybolCount>17</SybolCount>
+  <WordCount>3</WordCount>
+  <LineCount>1</LineCount>
+  <SentenseCount>1</SentenseCount>
+  <SentensePartCount>0</SentensePartCount>
+</Concordanse>

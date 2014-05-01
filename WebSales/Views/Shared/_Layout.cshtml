@@ -23,6 +23,8 @@
                    
                     <li>@Html.ActionLink("Главная", "Index", "Home")</li>
                     <li>@Html.ActionLink("Загрузить", "Index", "Upload")</li>
+                    <li>@Html.ActionLink("Все загрузки", "Index", "Item")</li>
+                    <li>@Html.ActionLink("Кабинет", "Index", "Cabinet")</li>
                     @if (HttpContext.Current.User.IsInRole("Admin"))
                     {
                         <li>@Html.ActionLink("Админка", "Index", "Account")</li>

@@ -16,8 +16,9 @@ namespace DataModel
     {
         public int Id { get; set; }
         public string FileName { get; set; }
-        public string ResultName { get; set; }
         public string UserId { get; set; }
         public Nullable<System.DateTime> UploadDate { get; set; }
+        public string ResultPath { get; set; }
+        public string UploadPath { get; set; }
     }
 }

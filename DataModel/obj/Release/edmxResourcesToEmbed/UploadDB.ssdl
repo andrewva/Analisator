@@ -5,10 +5,11 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="FileName" Type="nvarchar" MaxLength="50" />
-    <Property Name="ResultName" Type="nvarchar" MaxLength="50" />
+    <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+    <Property Name="ResultPath" Type="nvarchar" MaxLength="100" />
     <Property Name="UserId" Type="nvarchar" MaxLength="50" />
     <Property Name="UploadDate" Type="datetime" />
+    <Property Name="Uploadpath" Type="nvarchar" MaxLength="100" />
   </EntityType>
   <EntityContainer Name="ModelStoreContainer">
     <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />

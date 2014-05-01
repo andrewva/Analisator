@@ -4,9 +4,10 @@
     <EntitySetMapping Name="Items">
       <EntityTypeMapping TypeName="Model.Item">
         <MappingFragment StoreEntitySet="Items">
+          <ScalarProperty Name="UploadPath" ColumnName="Uploadpath" />
+          <ScalarProperty Name="ResultPath" ColumnName="ResultPath" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="FileName" ColumnName="FileName" />
-          <ScalarProperty Name="ResultName" ColumnName="ResultName" />
           <ScalarProperty Name="UserId" ColumnName="UserId" />
           <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
         </MappingFragment>

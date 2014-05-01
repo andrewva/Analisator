@@ -4,22 +4,22 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Items">
           <Key>
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="FileName" Type="nvarchar" MaxLength="50" />
-          <Property Name="ResultName" Type="nvarchar" MaxLength="50" />
+          <Property Name="FileName" Type="nvarchar" MaxLength="100" />
+          <Property Name="ResultPath" Type="nvarchar" MaxLength="100" />
           <Property Name="UserId" Type="nvarchar" MaxLength="50" />
           <Property Name="UploadDate" Type="datetime" />
+          <Property Name="Uploadpath" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityContainer Name="ModelStoreContainer">
           <EntitySet Name="Items" EntityType="Self.Items" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -28,10 +28,11 @@
             <PropertyRef Name="Id" />
           </Key>
           <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FileName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ResultName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="FileName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="UserId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="UploadDate" Type="DateTime" Precision="3" />
+          <Property Name="ResultPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UploadPath" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityContainer Name="UploadDB" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Items" EntityType="Self.Item" />
@@ -45,9 +46,10 @@
           <EntitySetMapping Name="Items">
             <EntityTypeMapping TypeName="Model.Item">
               <MappingFragment StoreEntitySet="Items">
+                <ScalarProperty Name="UploadPath" ColumnName="Uploadpath" />
+                <ScalarProperty Name="ResultPath" ColumnName="ResultPath" />
                 <ScalarProperty Name="Id" ColumnName="Id" />
                 <ScalarProperty Name="FileName" ColumnName="FileName" />
-                <ScalarProperty Name="ResultName" ColumnName="ResultName" />
                 <ScalarProperty Name="UserId" ColumnName="UserId" />
                 <ScalarProperty Name="UploadDate" ColumnName="UploadDate" />
               </MappingFragment>
