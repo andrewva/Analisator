@@ -6,6 +6,7 @@ using DataModel;
 
 namespace WebSales.Controllers
 {
+    [Authorize]
     public class ItemController : Controller
     {
         private readonly UploadDB _db = new UploadDB();
@@ -29,6 +30,7 @@ namespace WebSales.Controllers
             return View(item);
         }
 
+        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -42,7 +44,7 @@ namespace WebSales.Controllers
             }
             return View(item);
         }
-
+        [Authorize(Roles = "Admin")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)

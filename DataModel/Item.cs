@@ -7,18 +7,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace DataModel
 {
     using System;
     using System.Collections.Generic;
-    
+
     public partial class Item
     {
         public int Id { get; set; }
+        [Display(Name = "Название файла")]
+        [StringLength(50)]
         public string FileName { get; set; }
+        [Display(Name = "Кто загрузил")]
         public string UserId { get; set; }
+        [Display(Name = "Дата загрузки")]
         public Nullable<System.DateTime> UploadDate { get; set; }
+        [Display(Name = "Путь к результату")]
         public string ResultPath { get; set; }
+        [Display(Name = "Путь к загруженному файлу")]
         public string UploadPath { get; set; }
     }
 }

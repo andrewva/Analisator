@@ -1,8 +1,8 @@
 ﻿@model XMLParser.AnaliseModel
 @{
-    ViewBag.Title = "Result of analise";
+    ViewBag.Title = "Результат анализа текста";
 }
-<h2>Result</h2>
+<h2>Результат анализа текста</h2>
 @Scripts.Render("/Scripts/Chart.js")
 
 <style>
@@ -10,13 +10,57 @@
         float: left;
     }
 </style>
-
+<div class="inform">
+    <table class="table">
+        <tr>
+            <td>Количество слов словаря</td>
+            <td>@Model.DictionaryWordCount</td>
+        </tr>
+        <tr>
+            <td>Количество строк втексте</td>
+            <td>@Model.LineCount</td>
+        </tr>
+        <tr>
+            <td>Слово максимальной длины</td>
+            <td>@Model.MaxWord</td>
+        </tr>
+        <tr>
+            <td>Слово минимальной длины</td>
+            <td>@Model.MinWord</td>
+        </tr>
+        <tr>
+            <td>Количество предложений</td>
+            <td>@Model.SentenseCount</td>
+        </tr>
+        <tr>
+            <td>Количество символов</td>
+            <td>@Model.SymbolCount</td>
+        </tr>
+        <tr>
+            <td>Количество уникальных слов</td>
+            <td>@Model.UnoqueWordCount</td>
+        </tr>
+        <tr>
+            <td>Общее количество слов в тексте</td>
+            <td>@Model.WordCount</td>
+        </tr>
+    </table>
+</div>
 <div style="width:600px;height:600px;">
-    <canvas id="doughnut" height="300" width="200"></canvas>
-    <canvas id="line" height="300" width="1000"></canvas>
+    <div>
+        Соотношение длины словаря к количеству всех сло в тексте и
+        <canvas id="doughnut" height="300" width="200"></canvas>
+    </div>
+    <div>
+        частота символов в тексте
+        <canvas id="line" height="300" width="800"></canvas>
+    </div>
+
     <canvas id="polarArea" height="300" width="200"></canvas>
+
     <canvas id="bar" height="300" width="200"></canvas>
     <canvas id="pie" height="300" width="200"></canvas>
+
     <canvas id="radar" height="300" width="200"></canvas>
 </div>
 

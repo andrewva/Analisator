@@ -38,8 +38,8 @@ namespace XMLParser
                 DictionaryWordCount = conc.Items.Count,
                 FileName = pathToXml,
                 LineCount = conc.LineCount,
-                MaxWord = conc.Items.Select(x => x.Word.ToString()).OrderBy(m => m.ToString().Length).FirstOrDefault(),
-                MinWord =
+                MinWord = conc.Items.Select(x => x.Word.ToString()).OrderBy(m => m.ToString().Length).FirstOrDefault(),
+                MaxWord =
                     conc.Items.Select(x => x.Word.ToString())
                         .OrderByDescending(m => m.ToString().Length)
                         .FirstOrDefault(),

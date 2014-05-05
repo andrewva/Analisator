@@ -1,10 +1,10 @@
 ﻿using System.Web.Mvc;
-using DataModel;
 using WebSales.Models;
 using XMLParser;
 
 namespace WebSales.Controllers
 {
+    [Authorize]
     public class ResultController : Controller
     {
         public ActionResult Index(UploadData data)

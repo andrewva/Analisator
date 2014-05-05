@@ -3,16 +3,13 @@ using System.Collections.Generic;
 using System.IO;
 using System.Web;
 using System.Web.Mvc;
-using System.Web.Security;
-using System.Web.UI.WebControls;
 using Concordanse;
 using DataModel;
-using Microsoft.AspNet.Identity;
 using WebSales.Models;
-using XMLParser;
 
 namespace WebSales.Controllers
 {
+    [Authorize]
     public class UploadController : Controller
     {
         public ActionResult Index()

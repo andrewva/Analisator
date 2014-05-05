@@ -4,6 +4,7 @@ using DataModel;
 
 namespace WebSales.Controllers
 {
+    [Authorize]
     public class CabinetController : Controller
     {
         public ActionResult Index()

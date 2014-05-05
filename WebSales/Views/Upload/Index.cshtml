@@ -1,14 +1,14 @@
 ﻿@{
-    ViewBag.Title = "Upload your file";
+    ViewBag.Title = "Загрузить текстовый файл";
 }
 
-<h2>Upload your file</h2>
+<h2>Загрузите ваш текстовый файл</h2>
 
 <p>
     @using (Html.BeginForm("", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
         <input type="file" name="fileUpload" class="btn btn-default" /><br />
-        <input type="submit" name="Submit" id="SubmitSingle" value="Upload" class="btn btn-default" />
+        <input type="submit" name="Submit" id="SubmitSingle" value="Загрузить" class="btn btn-default" />
     }
 </p>
 @*<h2>Upload your several files</h2>
@@ -22,9 +22,10 @@
     }
 </p>*@
 <p>
+    Или напишите текст прямо здесь
     @using (Html.BeginForm("UpladText", "Upload", FormMethod.Post, new { enctype = "multipart/form-data" }))
     {
-        <textarea name="fileUpload" style="width: 600px"></textarea><br />
-        <input type="submit" name="Submit" id="SubmitSingle" value="Upload" class="btn btn-default" />
+        <textarea name="fileUpload" style="width: 600px; height: 400px"></textarea><br />
+        <input type="submit" name="Submit" id="SubmitSingle" value="Загрузить" class="btn btn-default" />
     }
 </p>
