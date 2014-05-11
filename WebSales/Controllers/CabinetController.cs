@@ -15,5 +15,12 @@ namespace WebSales.Controllers
                 return View( items.ToList());
             }
         }
+
+        public FileResult Download(string path)
+        {
+            var paths = path.Split('/');
+            var name = paths[paths.Length - 1];
+            return File(path, System.Net.Mime.MediaTypeNames.Application.Octet, name); 
+        }
 	}
 }

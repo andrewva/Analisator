@@ -23,7 +23,7 @@
 
                     <li>@Html.ActionLink("Главная", "Index", "Home")</li>
 
-                    @if (HttpContext.Current.User.IsInRole("Admin") || HttpContext.Current.User.IsInRole("User"))
+                    @if (HttpContext.Current.User.Identity.IsAuthenticated)
                     {
                         <li>@Html.ActionLink("Загрузить", "Index", "Upload")</li>
                         <li>@Html.ActionLink("Все загрузки", "Index", "Item")</li>
